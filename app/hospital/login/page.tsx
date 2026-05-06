@@ -39,7 +39,7 @@ export default function HospitalLoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    router.push(`/hospital/dashboard/${selectedHospital}`)
+    router.push(`/hospital/${selectedHospital}`)
   }
 
   const handleDemoLogin = (hospitalId: string) => {
@@ -47,7 +47,7 @@ export default function HospitalLoginPage() {
       email: "hospital@example.com",
       password: "123456",
     })
-    router.push(`/hospital/dashboard/${hospitalId}`)
+    router.push(`/hospital/${hospitalId}`)
   }
 
   return (

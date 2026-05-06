@@ -92,14 +92,14 @@ export const useAuthStore = create<AuthState>()(
       // ✅ Use JSON storage (recommended)
       storage: createJSONStorage(() => localStorage),
 
-      // ✅ Only persist important data
-      partialize: (state) => ({
-        user: state.user,
-        token: state.token,
-        isAuthenticated: state.isAuthenticated,
-        email: state.email,
-        otpStep: state.otpStep,
-      }),
+      // // ✅ Only persist important data
+      // partialize: (state) => ({
+      //   user: state.user,
+      //   token: state.token,
+      //   isAuthenticated: state.isAuthenticated,
+      //   email: state.email,
+      //   otpStep: state.otpStep,
+      // }),
     }
   )
 );

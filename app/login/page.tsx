@@ -180,7 +180,7 @@ export default function LoginPage() {
             </div>
 
             {/* Demo Credentials */}
-            <div className="bg-blue-50 rounded-lg p-4 border border-blue-200 text-sm mb-6">
+            {/* <div className="bg-blue-50 rounded-lg p-4 border border-blue-200 text-sm mb-6">
               <p className="text-gray-700 mb-2">
                 <span className="font-medium">Demo credentials:</span>
               </p>
@@ -190,7 +190,7 @@ export default function LoginPage() {
               <p className="text-gray-600 text-xs">
                 Password: <code className="bg-white px-2 py-1 rounded">demo123</code>
               </p>
-            </div>
+            </div> */}
 
             {/* Footer */}
             <p className="text-center text-sm text-gray-600">

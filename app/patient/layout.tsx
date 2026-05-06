@@ -32,6 +32,9 @@ import {
   Stethoscope,
   Cross,
 } from "lucide-react"
+import { useRouter } from "next/navigation"
+import { useAuthStore } from "@/store/useAuthStore"
+import { log } from "console"
 
 const sidebarLinks = [
   { href: "/patient", label: "Overview", icon: LayoutDashboard },
@@ -101,6 +104,26 @@ export default function DashboardLayout({
 }) {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const router = useRouter()
+  const { logout } = useAuthStore()
+
+  const logoutUser = async () => {
+    await fetch("http://localhost:3000/api/auth/logout", {
+      method: "POST",
+      credentials: "include", // 🔥 VERY IMPORTANT
+    });
+  };
+
+  const handleLogout = async () => {
+    try {
+      await logoutUser();       // 🔥 clear cookie (server)
+      logout();            // 🔥 clear Zustand (client)
+
+      router.push("/login");    // 🔥 redirect
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
 
   return (
     <div className="flex min-h-screen bg-background">
@@ -169,7 +192,7 @@ export default function DashboardLayout({
                 <DropdownMenuSeparator />
                 <DropdownMenuItem className="text-destructive">
                   <LogOut className="mr-2 h-4 w-4" />
-                  Log out
+                  <button onClick={handleLogout}>Logout</button>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

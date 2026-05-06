@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import dbConnect from "@/lib/dbConnect";
 import User from "@/models/userModel";
 import { signToken } from "@/utils/jwt";
-import { ro } from "date-fns/locale";
+
 
 export async function POST(req: NextRequest) {
   try {
@@ -49,16 +49,29 @@ export async function POST(req: NextRequest) {
 
     // generate JWT
     const token = signToken({
-      id: user._id,
+      sub: user._id,
       role: user.role,
       email: user.email,
     });
 
-    return NextResponse.json({
+    const res = NextResponse.json({
       role: user.role,
       message: "Login successful",
       token,
     });
+
+    console.log("verification successful, generated token:", token);
+
+    // set cookie (if using cookies)
+    res.cookies.set("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      path: "/", // 🔥 MUST
+      maxAge: 60 * 60 * 24 * 7,
+    });
+
+    return res;
 
   } catch (error: any) {
     return NextResponse.json(

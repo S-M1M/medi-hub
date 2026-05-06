@@ -142,7 +142,7 @@ export default function SignupPage() {
         <div className="w-full max-w-md">
           <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Create Account</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Create Patient Account</h2>
               <p className="text-gray-600 text-sm">
                 Join MediHub to discover and access healthcare services near you
               </p>
@@ -167,7 +167,7 @@ export default function SignupPage() {
                     type="text"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John"
+                    placeholder="Your Fullname"
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
                   />

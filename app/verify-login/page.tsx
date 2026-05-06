@@ -54,12 +54,12 @@ export default function VerifyEmailPage() {
         role: data.role,
       });
 
-      if (data.role === "patient") router.push("/dashboard");
-      else if (data.role === "doctor") router.push("/doctor");
-      else if (data.role === "nurse") router.push("/nurse");
-      else if (data.role === "hospital") router.push("/hospital/dashboard");
-      else router.push("/");
-      // router.push("/patient");
+      // if (data.role === "patient") router.push("/patient");
+      // else if (data.role === "doctor") router.push("/doctor");
+      // else if (data.role === "nurse") router.push("/nurse");
+      // else if (data.role === "hospital") router.push("/hospital/1");
+      // else router.push("/");
+      router.push("/patient");
 
 
     } catch (err: any) {

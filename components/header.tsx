@@ -50,7 +50,7 @@ export function Header() {
             <Link href="/login">Sign In</Link>
           </Button>
           <Button size="sm" asChild>
-            <Link href="/Signup">Sign Up</Link>
+            <Link href="/signup">Sign Up</Link>
           </Button>
         </div>
 
