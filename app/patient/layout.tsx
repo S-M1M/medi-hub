@@ -34,14 +34,14 @@ import {
 } from "lucide-react"
 
 const sidebarLinks = [
-  { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
-  { href: "/dashboard/profile", label: "Medical Profile", icon: User },
-  { href: "/dashboard/hospitals", label: "Nearby Hospitals", icon: MapPin },
-  { href: "/dashboard/doctors", label: "Find Doctors", icon: Stethoscope },
-  { href: "/dashboard/nurses", label: "Find Nurses", icon: Cross },
-  { href: "/dashboard/appointments", label: "Appointments", icon: Calendar },
-  { href: "/dashboard/tests", label: "Medical Tests", icon: TestTube },
-  { href: "/dashboard/reports", label: "Test Reports", icon: FileText },
+  { href: "/patient", label: "Overview", icon: LayoutDashboard },
+  { href: "/patient/profile", label: "Medical Profile", icon: User },
+  { href: "/patient/hospitals", label: "Nearby Hospitals", icon: MapPin },
+  { href: "/patient/doctors", label: "Find Doctors", icon: Stethoscope },
+  { href: "/patient/nurses", label: "Find Nurses", icon: Cross },
+  { href: "/patient/appointments", label: "Appointments", icon: Calendar },
+  { href: "/patient/tests", label: "Medical Tests", icon: TestTube },
+  { href: "/patient/reports", label: "Test Reports", icon: FileText },
 ]
 
 function SidebarContent({ pathname }: { pathname: string }) {

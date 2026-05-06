@@ -79,13 +79,13 @@ export default function DashboardPage() {
         </div>
         <div className="flex gap-2">
           <Button asChild>
-            <Link href="/dashboard/hospitals">
+            <Link href="/patient/hospitals">
               <MapPin className="mr-2 h-4 w-4" />
               Find Hospitals
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="/dashboard/tests">
+            <Link href="/patient/tests">
               <TestTube className="mr-2 h-4 w-4" />
               Book Test
             </Link>
@@ -207,7 +207,7 @@ export default function DashboardPage() {
               <CardDescription>Your medical test results</CardDescription>
             </div>
             <Button variant="ghost" size="sm" asChild>
-              <Link href="/dashboard/reports">
+              <Link href="/patient/reports">
                 View All <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </Button>
@@ -307,7 +307,7 @@ export default function DashboardPage() {
               className="h-auto flex-col gap-2 py-6"
               asChild
             >
-              <Link href="/dashboard/hospitals">
+              <Link href="/patient/hospitals">
                 <MapPin className="h-6 w-6 text-primary" />
                 <span>Find Hospital</span>
               </Link>
@@ -317,7 +317,7 @@ export default function DashboardPage() {
               className="h-auto flex-col gap-2 py-6"
               asChild
             >
-              <Link href="/dashboard/tests">
+              <Link href="/patient/tests">
                 <TestTube className="h-6 w-6 text-secondary" />
                 <span>Book Test</span>
               </Link>
@@ -327,7 +327,7 @@ export default function DashboardPage() {
               className="h-auto flex-col gap-2 py-6"
               asChild
             >
-              <Link href="/dashboard/appointments">
+              <Link href="/patient/appointments">
                 <Calendar className="h-6 w-6 text-chart-3" />
                 <span>Appointments</span>
               </Link>
@@ -337,7 +337,7 @@ export default function DashboardPage() {
               className="h-auto flex-col gap-2 py-6"
               asChild
             >
-              <Link href="/dashboard/profile">
+              <Link href="/patient/profile">
                 <FileText className="h-6 w-6 text-chart-4" />
                 <span>My Profile</span>
               </Link>
