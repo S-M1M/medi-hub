@@ -1,3 +1,5 @@
+"use client ";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -15,6 +17,8 @@ import {
   Pill,
   Stethoscope,
 } from "lucide-react"
+
+import { useAuthStore } from "@/store/useAuthStore";
 
 const upcomingAppointments = [
   {
@@ -65,6 +69,8 @@ const medications = [
 ]
 
 export default function DashboardPage() {
+  // const { user } = useAuthStore();
+
   return (
     <div className="space-y-6">
       {/* Welcome Section */}
